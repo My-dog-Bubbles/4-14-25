@@ -21,9 +21,10 @@ function test(){
     }
 }
 
-console.log(a,b) // b will not work bc it is scoped into the test function
-console.log(a,c) // can only be used within a block
-console.log(a,d) // var will work bc it is module scoped but don't use it 
+console.log(a) // b will not work bc it is scoped into the test function
+console.log(a) // can only be used within a block
+console.log(a) // var will work bc it is module scoped but don't use it 
+        // d deos not work tough ?!?!?!
 
 const globalVar = 'global' // global scope = everything use this
     // not using module and at the top of the text
@@ -88,10 +89,10 @@ function creatCount(){
 const counter = creatCount();
 counter.increment();
 console.log(counter.increment())
-increment()
-increment();
-increment();
-increment();
+counter.increment()
+counter.increment();
+counter.increment();
+counter.increment();
 
 /*
 Event Loops:
